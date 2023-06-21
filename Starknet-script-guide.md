@@ -42,11 +42,11 @@ tmux new -s stark-scr
 ```
 Переходим в папку со скриптом (папка у вас может по другому называться):
 ```
-cd starknet-script
+cd /root/starknet-script
 ```
 Теперь запускаем сам скрипт:
 ```
-python3 main.py
+npm start
 ```
 
 ### tmux команды
