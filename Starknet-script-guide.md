@@ -66,6 +66,10 @@ tmux attach -t stark-scr
 ```
 > !Только не закрывайте скрипт с помощью CTRL+C
 
+Создание новой сессии:
+```
+tmux new -s <name-of-session>
+```
 Закрыть все сессии:
 ```
 tmux kill-server
