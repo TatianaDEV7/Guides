@@ -78,3 +78,12 @@ tmux kill-server
 ```
 tmux kill-session -t <name-of-session>
 ```
+
+# Что делать руками
+Скрипт делает не все активности, поэтому я приведу сдесь активности для ручной активности:
+- https://www.dappland.com/ оценка приложений
+- https://app.jediswap.xyz/#/pool залить ликвидность
+- https://starknet.quest/quest/7 квесты
+- https://www.gol2.io/infinite Игра
+- https://starkgate.starknet.io/ Вывесли из starknet в ethereum
+- https://app.starknet.id/ Домен (бесплатные sub-domains на Argent уже не выдаются)
