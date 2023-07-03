@@ -87,3 +87,4 @@ tmux kill-session -t <name-of-session>
 - https://www.gol2.io/infinite Игра
 - https://starkgate.starknet.io/ Вывесли из starknet в ethereum
 - https://app.starknet.id/ Домен (бесплатные sub-domains на Argent уже не выдаются)
+- https://thirdweb.com/explore смартконтракты (в сетях zkSync, Nova...)
