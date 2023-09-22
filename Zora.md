@@ -12,8 +12,9 @@
 - Создать новые кошельки https://cointool.app/createWallet/eth
 - Пополнить с помощью [all-in-one](https://github.com/TatianaDEV7/all-in-one-v2/tree/main)
 ## Настройка и установка
+```
 git clone https://github.com/timfame-codespace/zora
-
+```
 Устанавливаем библиотеки :
 ```
 pip3 install colorama==0.4.6
