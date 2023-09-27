@@ -52,17 +52,25 @@ sudo apt install git-all -y
 git --version
 ```
 ## Установка самого софта
+1. Закачиваем по SFTP `zip` архив скрипта. Далее
 ```sh
+unzip /root/ZkSync-aio.zip
+cd /root/ZkSync-aio-master
 pip install -r requirements.txt
 
 # не нужно если используйте версию без лайта
 pip install git+https://github.com/zksync-sdk/zksync-python.git
 ```
-#№ Найстройка софта
+## Найстройка софта
 Настройка проходит в файле `config.py`
 ```
 nano /root/zksync-aio/config.py
 ```
 
+## Запуск софта
+```
+python3 main.py
 
+nohup python3 MAIN.py > log.log 2>&1 &
+```
 
