@@ -56,6 +56,13 @@ git --version
 ```sh
 unzip /root/ZkSync-aio.zip
 cd /root/ZkSync-aio-master
+
+python3 --version
+# узнаем версию и вставляем вместо 3.8 свою версию (3.8.10 это тоже считается как 3.8)
+apt install python3.8-venv
+python3.8 -m venv venv
+source venv/bin/activate
+
 pip install -r requirements.txt
 
 # не нужно если используйте версию без лайта
@@ -70,7 +77,8 @@ nano /root/zksync-aio/config.py
 ## Запуск софта
 ```
 python3 main.py
-
-nohup python3 MAIN.py > log.log 2>&1 &
+# nohup python3 MAIN.py > log.log 2>&1 &
 ```
+# Ошибка
+![image](https://github.com/TatianaDEV7/Guides/assets/98289003/ea1ce3d6-d191-4c98-8185-2851a3f10ab9)
 
