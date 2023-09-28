@@ -68,15 +68,47 @@ pip install -r requirements.txt
 # не нужно если используйте версию без лайта
 pip install git+https://github.com/zksync-sdk/zksync-python.git
 ```
+### исправление файлов для варианта с *zksync lite*
+```
+find / -name "site-packages"
+find / -name "v01.py"
+find / -name "responses.py"
+
+
+cd /root/venv/lib/python3.8/site-packages/zksync_sdk/types # вот тут и находятся нужные нам файлы
+# cd /root/ZkSync-aio-master/venv/lib/python3.8/site-packages
+# cd /usr/local/lib/python2.7/site-packages
+
+
+nano /root/venv/lib/python3.8/site-packages/zksync_sdk/types/responses.py
+nano /usr/local/lib/python3.8/dist-packages/zksync_sdk/types/responses.py
+
+nano /root/venv/lib/python3.8/site-packages/zksync_sdk/zksync_provider/v01.py
+nano /usr/local/lib/python3.8/dist-packages/zksync_sdk/zksync_provider/v01.py
+
+/root/ZkSync-aio-master/site-packages/
+
+
+
+
+sudo apt install unrar
+unrar unrar t ZkSync-aio-without-lite-3.rar
+unrar x ZkSync-aio-without-lite-3.rar
+
+```
+
 ## Найстройка софта
 Настройка проходит в файле `config.py`
 ```
-nano /root/zksync-aio/config.py
+nano /root/ZkSync-aio-master/config.py
 ```
 
 ## Запуск софта
 ```
+cd /root/ZkSync-aio-master
+cd /root/ZkSync-aio-without-lite
 python3 main.py
+
 # nohup python3 MAIN.py > log.log 2>&1 &
 ```
 # Ошибка
