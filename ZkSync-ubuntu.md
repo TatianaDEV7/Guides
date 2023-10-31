@@ -104,13 +104,28 @@ nano /root/ZkSync-aio-master/config.py
 ```
 
 ## Запуск софта
+Работа в Tmux
+```
+tmux new -s <name-of-session> # Новая сессия
+tmux ls
+tmux attach -t <name-of-session> # Зайти в сессию
+tmux kill-session -t <name-of-session> # Завершить сессию
+```
+
+С выводом stdout
 ```
 cd /root/ZkSync-aio-master
 cd /root/ZkSync-aio-without-lite
 python3 main.py
-
-# nohup python3 MAIN.py > log.log 2>&1 &
 ```
+В фоновом режиме
+```
+nohup python3 main.py > log.log 2>&1 &
+
+pgrep -a python # Узнать номер процесса
+kill <number> # Отменить выполнение процесса 
+```
+
 # Ошибка
 ![image](https://github.com/TatianaDEV7/Guides/assets/98289003/ea1ce3d6-d191-4c98-8185-2851a3f10ab9)
 
