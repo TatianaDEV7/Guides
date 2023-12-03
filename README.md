@@ -116,9 +116,12 @@ apt install python3-pip
 Создаем виртуальное окружение в котором будем работать
 ```
 apt install -y python3.9-venv -y
-mkdir /root/zksync-venv && cd /root/zksync-venv
-python3.10 -m venv /root/zksync-venv
-source /root/zksync-venv/bin/activate
+# mkdir /root/zksync-venv && cd /root/zksync-venv
+mkdir /root/ZkSync-aio-without-lite/zksync-venv && cd /root/ZkSync-aio-without-lite/zksync-venv
+python3.9 -m venv /root/ZkSync-aio-without-lite/zksync-venv
+source /root/ZkSync-aio-without-lite/zksync-venv/bin/activate
+python3 --version
+# должно быть Python 3.9.18
 # для выхода из виртуального окружения используем `deactivate`
 ```
 Производим конфигурацию виртуального окружения
