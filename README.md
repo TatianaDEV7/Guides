@@ -116,9 +116,9 @@ apt install python3-pip
 Создаем виртуальное окружение в котором будем работать
 ```
 apt install -y python3.9-venv -y
-mkdir /root/zksync-vanv && cd /root/zksync-vanv
-python3.10 -m venv /root/zksync-vanv
-source /root/zksync-vanv/bin/activate
+mkdir /root/zksync-venv && cd /root/zksync-venv
+python3.10 -m venv /root/zksync-venv
+source /root/zksync-venv/bin/activate
 # для выхода из виртуального окружения используем `deactivate`
 ```
 Производим конфигурацию виртуального окружения
@@ -126,5 +126,13 @@ source /root/zksync-vanv/bin/activate
 cd /root/ZkSync-aio-without-lite
 pip install -r requirements.txt
 pip install requests
+python main.py
+```
+[Настраиваем скрипт](https://teletype.in/@1liochka/S-bzaoADAAz) и запускаем
+```
+tmux new -s zksync
+# tmux ls
+# tmux attach -t zksync
+# tmux kill-session -t zksync
 python main.py
 ```
