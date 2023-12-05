@@ -53,7 +53,7 @@ update-alternatives --list python3
 update-alternatives --config python3
 ```
 
-## all-in-one-v2 by zaivanza
+# all-in-one-v2 by zaivanza
 - Github zaivanza 
 - Link https://github.com/zaivanza/all-in-one-v2
 - Guide https://teletype.in/@hodlmod.eth/how-to-run-scripts
@@ -96,7 +96,7 @@ tmux new -s all-1
 python main.py
 ```
 
-## zkSync-aio by 1liochka
+# zkSync-aio by 1liochka
 - Github 1liochka 
 - Guide https://teletype.in/@1liochka/S-bzaoADAAz
 - Python 3.9
@@ -138,4 +138,48 @@ tmux new -s zksync
 # tmux attach -t zksync
 # tmux kill-session -t zksync
 python main.py
+```
+
+# Scroll Smart Contrsct Deployer
+- Github https://github.com/nftscripts/scroll
+- Python 3.10
+
+Сразу же выбираем нужную версию Python.
+```
+update-alternatives --config python3
+python3 --version
+# Нужна Python 3.10
+```
+Распаковываем
+```
+unzip /root/scroll-master.zip
+cd /root/scroll-master
+```
+Создаем виртуальное окружение в котором будем работать
+```
+apt install -y python3.10-venv -y
+mkdir /root/scroll-master/scroll-venv && cd /root/scroll-master/scroll-venv
+python3.10 -m venv /root/scroll-master/scroll-venv
+source /root/scroll-master/scroll-venv/bin/activate
+deactivate
+python3 --version
+# должно быть Python 3.10.13
+# для выхода из виртуального окружения используем `deactivate`
+```
+Производим конфигурацию виртуального окружения
+```
+tmux new -s scroll
+cd /root/scroll-master
+source /root/scroll-master/scroll-venv/bin/activate
+pip install -r requirements.txt
+pip install requests
+python3.10 main.py
+```
+Настраиваем скрипт и запускаем. Для настройки изменяем файлы config.py и wallets.txt
+```
+tmux attach -t scroll
+# tmux new -s scroll
+# tmux ls
+# tmux kill-session -t scroll
+python3.10 main.py
 ```
