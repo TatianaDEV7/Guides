@@ -1,4 +1,5 @@
 ```
+unzip /root/LineaPark-free.zip
 # Проверим список версий  и выбор 3.11:
 python3 --version
 update-alternatives --list python3
