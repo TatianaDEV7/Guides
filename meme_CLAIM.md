@@ -21,3 +21,4 @@ pip install requests
 tmux attach -t meme_star_claim
 python main.py
 ```
+Activity is no longer actually.
